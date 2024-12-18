@@ -4,6 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary mobile-display">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">인스타 어쩌고</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <li><i class="bi bi-house"></i></li>
+            <li><i class="bi bi-search"></i></li>
+            <li><i class="bi bi-compass"></i></li>
+            <li><i class="bi bi-images"></i></li>
+            <li><i class="bi bi-send"></i></li>
+            <li><i class="bi bi-heart"></i></li>
+            <li><i class="bi bi-plus-circle"></i></li>
+          </div>
+        </div>
+      </div>
+    </nav> -->
+    <div class="wrapper">
+      <nav class="pc-navbar">
+        <div id="logo-image">인스타~</div>
+        <ul id="navbar-icon-ul">
+          <li>
+            <a href="#"><i class="bi bi-house"></i><span>홈</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-search"></i><span>검색</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-compass"></i><span>탐색 탭</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-images"></i><span>릴스</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-send"></i><span>메시지</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-heart"></i><span>알림</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-plus-circle"></i><span>만들기</span></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="vertical-line" class="pc-display"></div>
+
+      <div class="content-wrapper">
+        <section class="profile-section">
+          <div class="profile-image">
+            <img src="" alt="" />
+          </div>
+          <div class="profile-content">
+            <div class="profile-header">
+              <div class="profile-name">이름</div>
+              <button class="profile-btn">프로필 편집</button>
+              <button class="profile-btn">보관된 스토리 보기</button>
+              <i class="bi bi-gear"></i>
+            </div>
+
+            <div class="profile-stats">
+              <ul>
+                <li><strong>12345</strong> 게시물</li>
+                <li><strong>1233</strong> 팔로워</li>
+                <li><strong>1231</strong> 팔로우</li>
+              </ul>
+            </div>
+
+            <div class="profile-block2">
+              <ul>
+                <li>어쩌고 저쩌고</li>
+                <li>어쩌고 저쩌고2</li>
+                <li><a href="#">아무튼 링크</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div id="horizontal-line" class="pc-display"></div>
+
+        <section>
+          <nav id="posts">
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="bi bi-grid-3x3-gap"></i><span>계시물</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="bi bi-collection-play"></i><span>릴스</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="bi bi-person-square"></i><span>태그됨</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <article class="main-article">
+          <div><img src="" alt="" />4진</div>
+          <div><img src="" alt="" />사진</div>
+          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
+          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
+          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
+          <!-- <div><img src="" alt="" />ㅁㄴㄹㅇ</div>
+          <div><img src="" alt="" />ㅁㄴㄹㅇ</div>
+          <div><img src="" alt="" />ㅁㄴㄹㅇ</div>
+          <div><img src="" alt="" />ㅁㄴㄹㅇ</div>
+          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
+          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
+          <div><img src="" alt="" />ㅁㄹㄴㅇ</div> -->
+        </article>
+
+        <footer>
+          <ul id="footer-links">
+            <li><a href="#">Meta</a></li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">블로그</a></li>
+            <li><a href="#">채용 정보</a></li>
+            <li><a href="#">도움말</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">약관</a></li>
+            <li><a href="#">위치</a></li>
+            <li><a href="#">Instagram Lite</a></li>
+            <li><a href="#">Threads</a></li>
+            <li><a href="#">연락처 업로드 & 비사용자</a></li>
+            <li><a href="#">Meta Verified</a></li>
+          </ul>
+          <div id="footer-copyright">
+            <select name="" id="language-select">
+              <option value="ko">한국어</option>
+              <option value="en">English</option>
+              <option value="ja">日本語</option>
+              <option value="zh-cn">简体中文</option>
+              <option value="zh-tw">繁體中文</option>
+              <option value="es">Español</option>
+            </select>
+            <span>© 2024 Instagram from Meta</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
 </html>
