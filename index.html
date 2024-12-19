@@ -48,7 +48,82 @@
         </div>
       </div>
     </nav> -->
+    <!-- 모달창 -->
+    <div id="modal-bg" class="black-bg display-none">
+      <div id="profile-modal" class="white-bg">
+        <div id="profile-modal-header">
+          <h4>프로필 편집</h4>
+          <div class="header-buttons">
+            <button id="profile-save-btn">저장</button>
+            <button id="profile-close-btn"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </div>
+        <div id="profile-modal-content">
+          <label for="profile-image-input" style="cursor: pointer">
+            <i class="bi bi-person-circle" id="profile-edit-image"></i>
+            <img
+              id="preview-image"
+              style="
+                display: none;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+          </label>
+          <input
+            type="file"
+            id="profile-image-input"
+            accept="image/*"
+            style="display: none"
+          />
+          <div class="modal-input">
+            <label for="update-profile-id">인스타 아이디</label>
+            <input
+              type="text"
+              id="update-profile-id"
+              placeholder="인스타 아이디"
+            />
+          </div>
+          <div class="modal-input">
+            <label for="update-profile-name">이름</label>
+            <input type="text" id="update-profile-name" placeholder="이름" />
+          </div>
+          <div class="modal-input">
+            <label for="update-profile-url">웹사이트</label>
+            <input type="text" id="update-profile-url" placeholder="웹사이트" />
+          </div>
+          <div class="modal-input">
+            <label for="update-profile-info">프로필 설명</label>
+            <textarea
+              name=""
+              id="update-profile-info"
+              placeholder="프로필 설명"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 만들기 모달창 -->
+    <div class="add-post-modal display-none">
+      <div class="add-post-modal__form">
+        <form method="dialog">
+          <header class="modal__header">새 게시물 만들기</header>
+          <div class="add-post-modal__file">
+            <i class="bi bi-images"></i>
+            <span>사진을 선택하세요</span>
+            <button class="add-post-modal__choose-button">
+              컴퓨터에서 선택
+            </button>
+          </div>
+          <div class="add-post-modal__post"></div>
+        </form>
+      </div>
+    </div>
+
     <div class="wrapper">
+      <!-- 왼쪽 nav바 -->
       <nav class="pc-navbar">
         <div id="logo-image">인스타~</div>
         <ul id="navbar-icon-ul">
@@ -70,7 +145,7 @@
           <li>
             <a href="#"><i class="bi bi-heart"></i><span>알림</span></a>
           </li>
-          <li>
+          <li id="navbar__add-post">
             <a href="#"><i class="bi bi-plus-circle"></i><span>만들기</span></a>
           </li>
         </ul>
@@ -79,15 +154,17 @@
       <div id="vertical-line" class="pc-display"></div>
 
       <div class="content-wrapper">
+        <!-- 프로필 섹션 -->
         <section class="profile-section">
-          <div class="profile-image">
-            <img src="" alt="" />
+          <div id="profile-image">
+            <i class="bi bi-person-circle"></i>
+            <img src="" alt="프로필 이미지" />
           </div>
-          <div class="profile-content">
-            <div class="profile-header">
-              <div class="profile-name">이름</div>
-              <button class="profile-btn">프로필 편집</button>
-              <button class="profile-btn">보관된 스토리 보기</button>
+          <div id="profile-content">
+            <div id="profile-header">
+              <div id="profile-id">인스타 아이디</div>
+              <button id="profile-edit-btn">프로필 편집</button>
+              <button id="story-btn">보관된 스토리 보기</button>
               <i class="bi bi-gear"></i>
             </div>
 
@@ -101,20 +178,21 @@
 
             <div class="profile-block2">
               <ul>
-                <li>어쩌고 저쩌고</li>
-                <li>어쩌고 저쩌고2</li>
-                <li><a href="#">아무튼 링크</a></li>
+                <li id="profile-name">이름</li>
+                <li id="profile-info">프로필 설명</li>
+                <li id="profile-url">
+                  <a href="#" target="_blank">웹사이트</a>
+                </li>
               </ul>
             </div>
           </div>
         </section>
 
-        <div id="horizontal-line" class="pc-display"></div>
-
+        <!-- 게시물 릴스 태그 nav바 -->
         <section>
           <nav id="posts">
             <ul>
-              <li>
+              <li class="posts-item-selected">
                 <a href="#"
                   ><i class="bi bi-grid-3x3-gap"></i><span>계시물</span></a
                 >
@@ -132,22 +210,14 @@
             </ul>
           </nav>
         </section>
-
+        <!-- 메인 컨텐츠 -->
         <article class="main-article">
-          <div><img src="" alt="" />4진</div>
-          <div><img src="" alt="" />사진</div>
-          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
-          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
-          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
-          <!-- <div><img src="" alt="" />ㅁㄴㄹㅇ</div>
-          <div><img src="" alt="" />ㅁㄴㄹㅇ</div>
-          <div><img src="" alt="" />ㅁㄴㄹㅇ</div>
-          <div><img src="" alt="" />ㅁㄴㄹㅇ</div>
-          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
-          <div><img src="" alt="" />ㅁㄴㅇㄹ</div>
-          <div><img src="" alt="" />ㅁㄹㄴㅇ</div> -->
+          <div id="no-image">
+            <i class="bi bi-images"></i>
+          </div>
         </article>
 
+        <!-- 푸터 -->
         <footer>
           <ul id="footer-links">
             <li><a href="#">Meta</a></li>
